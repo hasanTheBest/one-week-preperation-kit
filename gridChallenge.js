@@ -2,13 +2,6 @@ function gridChallenge(grid) {
   // make sure row is sorted
   const gridRowSorted = grid.map((item) => item.split("").sort().join(""));
 
-  // const columChar = gridRowSorted.map((item) => item[0]).join("");
-  // const columnCarSorted = columChar.split("").sort().join("");
-
-  // if (columChar === columnCarSorted) {
-  //   return "YES";
-  // }
-
   // create cols characters array
   const columCharArr = [];
 
@@ -28,16 +21,6 @@ function gridChallenge(grid) {
 
     if (!isSorted) return "NO";
   }
-
-  // console.log("isSorted", isSorted);
-
-  // columCharArr.push(gridRowSorted.map((item, i) => item[i]).join());
-
-  // if (sorted) {
-  //   columCharArr.push(1);
-  // } else {
-  //   columCharArr.push(0);
-  // }
 
   return "YES";
 }
