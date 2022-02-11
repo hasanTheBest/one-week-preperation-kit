@@ -1,19 +1,24 @@
 function superDigit(n, k) {
-  // Write your code here
-  // if (n.length === 1) return parseInt(n);
+  // conver string to array and added
+  let digits = n.split("").reduce((prev, current) => {
+    return prev + current;
+  }, 0);
 
-  let digits = n.trim().repeat(k);
+  // multiple the results by k
+  digits = (digits * k).toString();
 
-  // addition
+  // add until get single digit
   while (digits.length > 1) {
     let sum = 0;
     for (let digit of digits) {
       sum += parseInt(digit);
     }
 
+    // Number to string
     digits = sum.toString();
   }
 
+  // should to return int value
   return parseInt(digits);
 }
 
