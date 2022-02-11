@@ -1,11 +1,14 @@
 function superDigit(n, k) {
   // conver string to array and added
-  let digits = n.split("").reduce((prev, current) => {
-    return prev + current;
-  }, 0);
+  let initialSum = 0;
+  for (let d of n.split("")) {
+    initialSum += d;
+  }
 
   // multiple the results by k
-  digits = (digits * k).toString();
+  let digits = (initialSum * k).toString();
+
+  // digits = (digits * k).toString();
 
   // add until get single digit
   while (digits.length > 1) {
